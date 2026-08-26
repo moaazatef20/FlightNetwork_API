@@ -1,6 +1,8 @@
 using FlightNetwork.Api.ErrorHandling;
 using FlightNetwork.Services;
 
+const string FrontendCorsPolicy = "FrontendCorsPolicy";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +14,19 @@ builder.Services.AddServices(builder.Configuration);
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(FrontendCorsPolicy, policy =>
+    {
+        // TODO: narrow this to the deployed Vercel origin, e.g.
+        // policy.WithOrigins("https://<app>.vercel.app") — AllowAnyOrigin is only here to
+        // unblock the frontend integration before that URL exists.
+        policy.AllowAnyOrigin()
+            .WithMethods("GET", "POST", "PUT", "DELETE")
+            .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -25,6 +40,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(FrontendCorsPolicy);
 
 app.UseAuthorization();
 
