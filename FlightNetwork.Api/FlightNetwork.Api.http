@@ -1,0 +1,6 @@
+@FlightNetwork.Api_HostAddress = http://localhost:5006
+
+GET {{FlightNetwork.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

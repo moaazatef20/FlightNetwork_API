@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="FlightNetwork.Api/FlightNetwork.Api.csproj" />
+  <Project Path="FlightNetwork.Api.Tests/FlightNetwork.Api.Tests.csproj" />
+  <Project Path="FlightNetwork.DataAccess/FlightNetwork.DataAccess.csproj" />
+  <Project Path="FlightNetwork.Models/FlightNetwork.Models.csproj" />
+  <Project Path="FlightNetwork.Services/FlightNetwork.Services.csproj" />
+  <Project Path="FlightNetwork.Services.Tests/FlightNetwork.Services.Tests.csproj" />
+</Solution>
