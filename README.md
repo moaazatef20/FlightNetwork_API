@@ -58,7 +58,7 @@ A concrete example from this project's own data makes the distinction between "f
 
 ## Data Model
 
-![Flight Network graph schema](./diagrams/flight_network_schema.svg)
+![Flight Network graph schema](./screenshots/Flight Network graph schema.png)
 
 ### Nodes
 
