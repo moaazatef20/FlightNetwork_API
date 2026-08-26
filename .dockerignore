@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+.git/
+*.slnx
+**/*.Tests/
+README.md
+CLAUDE.md
