@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(echo $HOME; ls -la \"$HOME\" 2>/dev/null | grep -i claude; find \"/c/Users/VICTUS/.claude\" -maxdepth 2 2>/dev/null)"
-    ]
-  }
-}
