@@ -2,6 +2,8 @@
 
 A graph-database-backed application for exploring flight connectivity between airports — built for the Wexa AI CognoDB take-home assignment.
 
+**Live API:** [https://flightnetwork-api.onrender.com](https://flightnetwork-api.onrender.com) *(hosted on Render's free tier — the first request after a period of inactivity may take a few seconds to wake the instance)*
+
 Given any two airports, the app finds the fastest (fewest-stops) route, alternative routes, the true shortest route by real-world distance, and the most connected ("hub") airports in the network — all powered by native graph traversal rather than relational joins.
 
 ---
@@ -148,7 +150,7 @@ On first run, the app automatically:
 - applies the schema (uniqueness constraints on `Airport.code` and `Airline.code`)
 - seeds the graph from the bundled `airports.json` / `airlines.json` / `routes.json` (idempotent — re-running does nothing if data already exists)
 
-The API is available at `http://localhost:5099` (see console output for the exact port), with Swagger UI at `/swagger`.
+The API is available at `http://localhost:5099` (see console output for the exact port). A hosted version is live at [https://flightnetwork-api.onrender.com](https://flightnetwork-api.onrender.com).
 
 ### 4. Run the frontend
 
@@ -224,4 +226,23 @@ All queries use parameterized Cypher (no string concatenation) via the official 
 
 ## Screenshots
 
-*(to be added once the frontend is complete)*
+**Empty state — search prompt before any airports are chosen:**
+![Empty state](./screenshots/01-empty-state.png)
+
+**Fewest-stops result, with the "not distance flown" callout:**
+![Fewest stops result](./screenshots/02-fewest-stops.png)
+
+**Same origin/destination, ranked by shortest distance instead — a different route entirely:**
+![Shortest distance result](./screenshots/03-shortest-distance.png)
+
+**A long-haul example (Cairo → Asahikawa) showing multi-hop traversal across the network:**
+![Long-haul multi-hop example](./screenshots/04-long-haul-example.png)
+
+**Alternative paths — every route tied for the fewest number of stops:**
+![Alternative paths](./screenshots/05-alternatives.png)
+
+**Hub airports — busiest nodes in the network by total connections:**
+![Hub airports](./screenshots/06-hubs.png)
+
+**Airports directory — searchable, paginated list of all 1,403 airports:**
+![Airports directory](./screenshots/07-airports.png)
