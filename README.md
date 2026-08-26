@@ -4,6 +4,10 @@ A graph-database-backed application for exploring flight connectivity between ai
 
 **Live API:** [https://flightnetwork-api.onrender.com](https://flightnetwork-api.onrender.com) *(hosted on Render's free tier — the first request after a period of inactivity may take a few seconds to wake the instance)*
 
+**Live App:** *(add your Vercel frontend URL here)*
+
+**Demo Video:** [Watch the screen recording](https://drive.google.com/file/d/1AenbRKyBrEOQIW1ClmeOoRdXFatG5-1T/view?usp=sharing)
+
 Given any two airports, the app finds the fastest (fewest-stops) route, alternative routes, the true shortest route by real-world distance, and the most connected ("hub") airports in the network — all powered by native graph traversal rather than relational joins.
 
 ---
@@ -246,3 +250,5 @@ All queries use parameterized Cypher (no string concatenation) via the official 
 
 **Airports directory — searchable, paginated list of all 1,403 airports:**
 ![Airports directory](./screenshots/07-airports.png)
+
+**Demo video:** [Watch the screen recording](https://drive.google.com/file/d/1AenbRKyBrEOQIW1ClmeOoRdXFatG5-1T/view?usp=sharing)
