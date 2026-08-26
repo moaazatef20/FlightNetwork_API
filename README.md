@@ -2,9 +2,9 @@
 
 A graph-database-backed application for exploring flight connectivity between airports — built for the Wexa AI CognoDB take-home assignment.
 
-**Live API:** [https://flightnetwork-api.onrender.com](https://flightnetwork-api.onrender.com) *(hosted on Render's free tier — the first request after a period of inactivity may take a few seconds to wake the instance)*
+**Live App:** [https://flight-network-front.vercel.app](https://flight-network-front.vercel.app) *(open this to try the app)*
 
-**Live App:** *(add your Vercel frontend URL here)*
+**Live API:** [https://flightnetwork-api.onrender.com](https://flightnetwork-api.onrender.com) *(REST API — no UI at the root path, hosted on Render's free tier so the first request after inactivity may take a few seconds)*
 
 **Demo Video:** [Watch the screen recording](https://drive.google.com/file/d/1AenbRKyBrEOQIW1ClmeOoRdXFatG5-1T/view?usp=sharing)
 
@@ -154,7 +154,7 @@ On first run, the app automatically:
 - applies the schema (uniqueness constraints on `Airport.code` and `Airline.code`)
 - seeds the graph from the bundled `airports.json` / `airlines.json` / `routes.json` (idempotent — re-running does nothing if data already exists)
 
-The API is available at `http://localhost:5099` (see console output for the exact port). A hosted version is live at [https://flightnetwork-api.onrender.com](https://flightnetwork-api.onrender.com).
+The API is available at `http://localhost:5099` (see console output for the exact port). A hosted version is live at [https://flightnetwork-api.onrender.com](https://flightnetwork-api.onrender.com), and the frontend consuming it is live at [https://flight-network-front.vercel.app](https://flight-network-front.vercel.app).
 
 ### 4. Run the frontend
 
